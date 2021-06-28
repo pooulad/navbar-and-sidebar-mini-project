@@ -1,0 +1,159 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  font-weight: 800;
+  font-family:'Courier New', Courier, monospace;
+}
+.sidebar{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 95%;
+}
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle_btn{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 0px !important;
+  transition: transform 200ms linear;
+}
+.toggle_btn:hover{
+  transform: scale(1.2);
+}
+.toggle_btn img{
+  width: 40px;
+}
+.nav_ul {
+  margin-top: 10px;
+  transform: translate(-200%);
+  width: 100%;
+  position: absolute;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  list-style-type: none;
+  align-items: center;
+}
+.show_sidebar{
+  transform: translate(0);
+}
+.show_sidebar.sidebar.toggle_btn{
+  display: none;
+}
+.nav_ul li {
+  width: 100%;
+  transition: transform 800ms linear ease-in;
+  padding: 15px;
+}
+.nav_ul li:hover a {
+  color: #ffffff;
+}
+.nav_ul li:hover {
+  transform: scale(1.2);
+  background-color: #810ae2;
+  color: #ffffff;
+}
+.nav_ul li a {
+  color: #810ae2;
+  margin: 10px;
+  text-decoration: none;
+}
+.nav_ul li a:hover {
+  cursor: pointer;
+  background-color: red;
+  border-radius: 5px;
+  color: #ffffff;
+  margin: 10px;
+  text-decoration: none;
+}
+
+@media screen and (min-width:768px) {
+  .sidebar{
+    width: 95%;
+    margin: 10px auto;
+  }
+  .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .toggle_btn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 200ms linear;
+  }
+  .toggle_btn:hover{
+    transform: scale(1.2);
+  }
+  .toggle_btn img{
+    width: 40px;
+  }
+  .close_btn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 200ms linear;
+  }
+  .close_btn:hover{
+    transform: scale(1.2);
+  }
+  .close_btn img{
+    width: 40px;
+  }
+  .nav_ul {
+    transform: translate(-200%);
+    width: 20%;
+    position: absolute;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    list-style-type: none;
+    align-items: center;
+  }
+  .show_sidebar{
+    transform: translate(0);
+  }
+  .show_sidebar.sidebar.toggle_btn{
+    display: none;
+  }
+  .nav_ul li {
+    width: 100%;
+    transition: transform 800ms linear ease-in;
+    padding: 15px;
+  }
+  .nav_ul li:hover a {
+    color: #ffffff;
+  }
+  .nav_ul li:hover {
+    transform: scale(1.2);
+    background-color: #810ae2;
+    color: #ffffff;
+  }
+  .nav_ul li a {
+    color: #810ae2;
+    margin: 10px;
+    text-decoration: none;
+  }
+  .nav_ul li a:hover {
+    cursor: pointer;
+    background-color: red;
+    border-radius: 5px;
+    color: #ffffff;
+    margin: 10px;
+    text-decoration: none;
+  }
+  
+}
